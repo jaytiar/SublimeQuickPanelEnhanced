@@ -2,21 +2,27 @@
     // Provide a "delay" argument to adjust the timeout, default 200 (ms).
     { "keys": ["backspace"], "command": "quick_panel_delete", "context":
         [
-            { "key": "overlay_visible", "operator": "equal", "operand": true }
+            { "key": "overlay_visible", "operator": "equal", "operand": true },
+            { "key": "setting.is_widget", "operator": "equal", "operand": true },
+            { "key": "panel_has_focus", "operator": "equal", "operand": false }
         ]
     },
 
     // Provide a "count" argument to adjust the scroll speed, default 8.
     {"keys": ["pageup"], "command": "quick_panel_page_up", "context":
         [
-            { "key": "overlay_visible", "operator": "equal", "operand": true }
+            { "key": "overlay_visible", "operator": "equal", "operand": true },
+            { "key": "setting.is_widget", "operator": "equal", "operand": true },
+            { "key": "panel_has_focus", "operator": "equal", "operand": false }
         ]
     },
 
     // Provide a "count" argument to adjust the scroll speed, default 8.
     {"keys": ["pagedown"], "command": "quick_panel_page_down", "context":
         [
-            { "key": "overlay_visible", "operator": "equal", "operand": true }
+            { "key": "overlay_visible", "operator": "equal", "operand": true },
+            { "key": "setting.is_widget", "operator": "equal", "operand": true },
+            { "key": "panel_has_focus", "operator": "equal", "operand": false }
         ]
     },
 ]
